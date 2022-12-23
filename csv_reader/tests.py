@@ -11,8 +11,14 @@ class TestReadCSV(TestCase):
     def test_read_csv(self):
         response = self.client.get('/read_csv/')
         
+        file = 'spacex_launch_data.csv'
+        
         # test case to check whether file exists or not
-        self.assertTrue(open('spacex_launch_data.csv', 'r' , encoding='UTF-8'))
+        self.assertTrue(open(file, 'r' , encoding='UTF-8'))
+
+        # test case to check the file is csv
+        file_ext = file.split('.')[-1]
+        self.assertEqual(file_ext , 'csv')
         
         # test case to check the response code
         self.assertEqual(response.status_code, 200)

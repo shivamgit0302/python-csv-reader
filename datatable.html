@@ -21,11 +21,11 @@ table.dataTable {
 }    
 </style>
 
-<title>CSV READER</title>
+<title>Csv Reader</title>
 </head>
 <body>
 
-<h2>SpaceX Launch Data</h2>
+{% if headers and value %}<h2>SpaceX Launch Data</h2>{% else %}<h2>No data to display</h2>{% endif %}
 
 <div class="table-responsive">
   <table class="table table-striped table-bordered table-sm" id="table_id">
