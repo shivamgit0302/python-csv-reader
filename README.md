@@ -1,4 +1,4 @@
-# aie_test_project
+# python csv reader
 
 simple project to read a csv file and displaybit into a table.
 
